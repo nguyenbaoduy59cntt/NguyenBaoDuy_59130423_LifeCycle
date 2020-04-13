@@ -1,0 +1,20 @@
+Câu 4: Các phương thức tuần tự như sau:
+	- Khi ứng dụng đang chạy ( đang giao tiếp với người dùng) : Resume
+	- Bấm nào nút Back: từ Resume, ứng dụng sẽ chuyển sang trạng thái Pause, nhưng khi nhấn Back, thì sẽ trở ra màn hình chính,
+	lúc này ứng dụng bị che hết bởi màn hình chính, nên ứng dụng sẽ rơi vào trạng thái Stop và bị hệ thống lấy lại bộ nhớ,
+	nên trở về trạng thái Destroy.
+	- Khi mở lại ứng dụng, ứng dụng sẽ được tạo lập lại( quá trình này là quá trình yêu cầu hệ thống cấp phát bộ nhớ) (Create),
+	sau đó được khởi chạy (Start) và hiện ra giao diện tương tác với người dùng (Resume).
+	=> Vậy phương thức tuần tự cho tiến trình này là: Resume -> Pause -> Stop -> Destroy -> Create -> Start -> Resume.
+
+Câu 5: Các phương thức tuần tự như sau:
+	- Khi ứng dụng đang chạy ( đang giao tiếp với người dùng) : Resume
+	- Bấm nào nút Home: từ Resume, ứng dụng sẽ chuyển sang trạng thái Pause và trở ra màn hình chính,
+	lúc này ứng dụng bị che hết bởi màn hình chính, nên ứng dụng sẽ rơi vào trạng thái Stop.
+	- Khi mở lại ứng dụng, bởi vì ứng dụng vẫn còn trong khay hệ thống nên nó chỉ cần khởi chạy lại (Restart) chứ không cần phải tạo lập,
+	sau đó ứng dụng được khởi chạy (Start) và hiện ra giao diện tương tác với người dùng (Resume).
+	=> Vậy phương thức tuần tự cho tiến trình này là: Resume -> Pause -> Stop -> Restart -> Start -> Resume.
+
+Câu 6: Để khôi phục lại trạng thái hiển thị của ứng dụng khi chạy lại thì ta nên thực hiện ngay trong phương thức Resume.
+	Bởi vì Resume là phương thức giao tiếp giữa ứng dụng và người dùng, nên khi chạy lại, hệ thống sẽ cho ta vô thẳng giao diện giao tiếp
+	khi ứng dụng bắt đầu trạng thái giao tiếp (phương thức Resume) với người dùng.
